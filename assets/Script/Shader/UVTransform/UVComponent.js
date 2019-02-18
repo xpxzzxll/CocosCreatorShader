@@ -17,9 +17,7 @@ cc.Class({
             set (val) {
                 this._uvOffset.x = val.x;
                 this._uvOffset.y = val.y;
-                if (this._material) {
-                    this._material.u_offset = this._uvOffset;
-                }
+                this.material.u_offset = this._uvOffset;
             }
         },
 
@@ -31,34 +29,13 @@ cc.Class({
             set (val) {
                 this._uvTiling.x = val.x;
                 this._uvTiling.y = val.y;
-                if (this._material) {
-                    this._material.u_offset_tiling = this._uvTiling;
-                }
+                this.material.u_offset_tiling = this._uvTiling;
             }
         },
-
-        _color : cc.color(),
-        _material : null
     },
 
-    // onLoad () {},
-
-    start () {
-        this._applyShader();
-    },
-
-    _applyShader() {
-        let sprite = this.getComponent(cc.Sprite);
-        let material = new UVMaterial();
-        let texture = sprite.spriteFrame.getTexture();
-
-        material.texture = texture
-        material.updateHash();
-
-        sprite._material = material;
-        sprite._renderData.material = material;
-
-        this._material = material;
+    onLoad() {
+        this.Material = UVMaterial;
     },
 
     update(dt) {
