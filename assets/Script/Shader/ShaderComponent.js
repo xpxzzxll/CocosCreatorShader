@@ -10,13 +10,15 @@ cc.Class({
         //材质的构造函数
         Material: {
             default : null,
-            type : Function
+            type : Function,
+            visible : false
         },
         
         material : {
             get() {
                 return this._material;
-            }
+            },
+            visible: false
         },
         _material : {
             default : null,
