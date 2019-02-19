@@ -28,24 +28,35 @@ cc.Class({
     },
 
     onEnable() {
-            let rc = this.getComponent(cc.RenderComponent);
-            let texture = null;
-            if (rc instanceof cc.Sprite) {
-                texture = rc.spriteFrame.getTexture();
-            } else if (rc instanceof dragonBones.ArmatureDisplay) {
-                texture = rc.dragonAtlasAsset && rc.dragonAtlasAsset.texture;
+        /**
+         * 开启会使得不是图集的texture被合到一起, 导致在native中shader不起作用, web中没事
+         * 如果texture被打包成atlas就没事
+         * 查看creator的代码, (!spriteframe._original && dynamicAtlasManager) 会被 dynamicAtlasManager.insertSpriteFrame
+         * 如果需要单独控制自行实现
+         */
+        cc.dynamicAtlasManager.enabled = false;
+
+        let rc = this.getComponent(cc.RenderComponent);
+        let texture = null;
+        if (rc instanceof cc.Sprite) {
+            texture = rc.spriteFrame.getTexture();
+        } else if (rc instanceof dragonBones.ArmatureDisplay) {
+            texture = rc.dragonAtlasAsset && rc.dragonAtlasAsset.texture;
+        }
+        let material = this._material || new this.Material();
+        material.useColor = false;
+        if (texture) {
+            material.texture = texture;
+            if (rc instanceof cc.Sprite && rc._renderData) {
+                 rc._renderData.material = material;
             }
-            let material = new this.Material();
-            material.useColor = false;
-            if (texture) {
-                material.texture = texture;
-                rc.markForUpdateRenderData(true);
-                rc.markForRender(true);
-            } else {
-                rc.disableRender();
-            }
-            rc._updateMaterial(material);
-            this._material = material;
+            rc.markForUpdateRenderData(true);
+            rc.markForRender(true);
+        } else {
+            rc.disableRender();
+        }
+        rc._updateMaterial(material);
+        this._material = material;
     },
     onDisable () {
         let rc = this.getComponent(cc.RenderComponent);
