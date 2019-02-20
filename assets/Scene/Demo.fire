@@ -41,9 +41,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.7124880287252227,
-      "y": 0.7124880287252227,
-      "z": 0.7124880287252227
+      "x": 0.7124880287252222,
+      "y": 0.7124880287252222,
+      "z": 0.7124880287252222
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -754,7 +754,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "43046_ske",
+    "_name": "George",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -781,8 +781,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
+      "width": 242,
+      "height": 261
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -791,8 +791,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 296,
-      "y": -266,
+      "x": 314,
+      "y": -142,
       "z": 0
     },
     "_scale": {
@@ -813,10 +813,10 @@
     "_zIndex": 0,
     "_is3DNode": false,
     "groupIndex": 0,
-    "_id": "1dY/UFdFRD74fkPyzLXiEW"
+    "_id": "2fLNr6i5BAW59jLv+9mXhb"
   },
   {
-    "__type__": "dragonBones.ArmatureDisplay",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -825,23 +825,26 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_armatureName": "armatureName",
-    "_animationName": "wait",
-    "playTimes": 0,
-    "_N$dragonAsset": {
-      "__uuid__": "c0c3e80f-706a-406c-872c-f6d8a9da8f09"
+    "_spriteFrame": {
+      "__uuid__": "c6afd533-28ce-4375-8e23-4cf1b3787cd5"
     },
-    "_N$dragonAtlasAsset": {
-      "__uuid__": "fd201b48-2630-4961-889a-3808a8b8f44e"
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
     },
-    "_N$_defaultArmatureIndex": 0,
-    "_N$_animationIndex": 4,
-    "_N$timeScale": 1,
-    "_N$debugBones": false,
-    "_id": "cc9XyttJBIbILPXQGKfx/X"
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_state": 0,
+    "_atlas": null,
+    "_id": "69ao6LwMdJp4wY6zZ4eSRK"
   },
   {
-    "__type__": "a52e92Q0QpKiJbI3DoW7f6Z",
+    "__type__": "23864/XIgtHQ5qoo6t+AUFf",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -849,7 +852,8 @@
     },
     "_enabled": true,
     "Material": null,
-    "_id": "ab5hyNFMNINYBRnRODKt1g"
+    "_time": 0,
+    "_id": "83vydQ+UFH0Lb4XjGXiIxA"
   },
   {
     "__type__": "cc.Canvas",
