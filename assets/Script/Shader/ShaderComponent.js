@@ -29,7 +29,7 @@ cc.Class({
 
     onEnable() {
         /**
-         * 开启会使得不是图集的texture被合到一起, 导致在native中shader不起作用, web中没事
+         * 开启会使得不是图集的texture被合到一起, 导致在native中shader不起作用, web中默认为false, native中默认为true
          * 如果texture被打包成atlas就没事
          * 查看creator的代码, (!spriteframe._original && dynamicAtlasManager) 会被 dynamicAtlasManager.insertSpriteFrame
          * 如果需要单独控制自行实现
