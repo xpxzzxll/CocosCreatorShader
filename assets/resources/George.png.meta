@@ -1,15 +1,14 @@
 {
-  "ver": "2.3.0",
+  "ver": "2.2.0",
   "uuid": "f9eed901-d06f-4110-9fad-841914bec6f6",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "George": {
       "ver": "1.0.3",
-      "uuid": "c6afd533-28ce-4375-8e23-4cf1b3787cd5",
+      "uuid": "35da6696-7c95-4344-821a-1e85a09450a4",
       "rawTextureUuid": "f9eed901-d06f-4110-9fad-841914bec6f6",
       "trimType": "auto",
       "trimThreshold": 1,

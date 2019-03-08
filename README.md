@@ -1,5 +1,5 @@
 # CocosCreatorShader
 
-基于CococCreator2.1.0版本的ShaderDemo
+基于CococCreator2.0.9版本的ShaderDemo
 
 目前可以使用在cc.Sprite和dragonBones.ArmatureDisplay

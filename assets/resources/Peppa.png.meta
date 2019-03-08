@@ -1,15 +1,14 @@
 {
-  "ver": "2.3.0",
+  "ver": "2.2.0",
   "uuid": "5bca91cb-3d54-4828-98c2-7340b527fbb5",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "Peppa": {
       "ver": "1.0.3",
-      "uuid": "c97e4d6f-1cff-4a77-b17e-29f7cfe40c67",
+      "uuid": "80caeb7a-5092-4831-a6d5-640b2a75da93",
       "rawTextureUuid": "5bca91cb-3d54-4828-98c2-7340b527fbb5",
       "trimType": "auto",
       "trimThreshold": 1,
