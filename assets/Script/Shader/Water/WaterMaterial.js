@@ -12,6 +12,7 @@ cc.Class({
                 uniform sampler2D texture;
                 uniform vec2 iResolution;
                 uniform float iTime;
+                uniform lowp vec4 color;
                 varying vec2 uv0;
                 #define F cos(x-y)*cos(y),sin(x+y)*sin(y)
                 vec2 s(vec2 p)
@@ -28,7 +29,7 @@ cc.Class({
                     vec2 q = uv+2./iResolution.x*(s(uv)-s(uv+rs));
                     //反转y
                     //q.y=1.-q.y;
-                    fragColor = texture2D(texture, q);
+                    fragColor = color * texture2D(texture, q);
                 }
                 void main()
                 {

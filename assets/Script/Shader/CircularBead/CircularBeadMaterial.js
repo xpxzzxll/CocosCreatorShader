@@ -10,9 +10,10 @@ cc.Class({
         fsh: {
             default: `
                 uniform sampler2D texture;
+                uniform lowp vec4 color;
                 varying vec2 uv0;
                 void main() {
-                    vec4 c = texture2D(texture, uv0);
+                    vec4 c = color * texture2D(texture, uv0);
                     vec2 uv = uv0 - vec2(0.5, 0.5); 
                     float rx = mod(abs(uv.x), 0.4);
                     float ry = mod(abs(uv.y), 0.4);

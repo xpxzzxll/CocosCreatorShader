@@ -62,12 +62,15 @@ cc.Class({
                 return this._color;
             },
             set(val) {
-                var color = this._color;
-                color.r = val.r / 255;
-                color.g = val.g / 255;
-                color.b = val.b / 255;
-                color.a = val.a / 255;
-                this._effect.setProperty('color', color);
+                if (!val.equals(this._color)) {
+                    this._color = val;
+                    var color = {};
+                    color.r = val.r / 255;
+                    color.g = val.g / 255;
+                    color.b = val.b / 255;
+                    color.a = val.a / 255;
+                    this._effect.setProperty('color', color);
+                }
             }
         },
     },

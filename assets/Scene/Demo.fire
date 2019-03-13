@@ -291,7 +291,7 @@
       }
     ],
     "_prefab": null,
-    "_opacity": 255,
+    "_opacity": 122,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -364,7 +364,7 @@
     "_id": "93MmSRYYRJvL4YVgt1dUhI"
   },
   {
-    "__type__": "2a54cTJtyhAp4JG+//ZxEOy",
+    "__type__": "23864/XIgtHQ5qoo6t+AUFf",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -372,7 +372,8 @@
     },
     "_enabled": true,
     "Material": null,
-    "_id": "3fCZmjUs1CoIy+LCOCmAlT"
+    "_time": 0,
+    "_id": "991wJi9Z9BzoGJU3PMgacz"
   },
   {
     "__type__": "cc.Widget",

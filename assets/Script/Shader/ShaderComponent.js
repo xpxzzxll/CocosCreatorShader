@@ -56,6 +56,15 @@ cc.Class({
             rc.disableRender();
         }
         rc._updateMaterial(material);
+
+        var color = new cc.Color(
+            this.node.color.r,
+            this.node.color.g,
+            this.node.color.b,
+            this.node.opacity
+        );
+        material.color = color
+
         this._material = material;
     },
     onDisable () {

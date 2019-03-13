@@ -29,7 +29,7 @@ cc.Class({
                     return brightness;
                 }
                 void main() {
-                    vec4 tex = texture2D(texture, uv0);
+                    vec4 tex = color * texture2D(texture, uv0);
                     if (tex.w > 0.5) {
                         float brightness = flash(uv0);
                         gl_FragColor = tex + vec4(1.0, 1.0, 1.0, 1.0) * brightness;
