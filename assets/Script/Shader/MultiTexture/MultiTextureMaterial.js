@@ -14,7 +14,7 @@ cc.Class({
                 varying mediump vec2 uv0;
                 void main()
                 {
-                    gl_FragColor = texture2D(texture1, uv0);
+                    gl_FragColor = texture2D(texture, uv0) + texture2D(texture1, uv0);
                 }
             `,
             override: true
@@ -38,7 +38,10 @@ cc.Class({
     },
 
     ctor() {
-        ShaderMaterial.call(this, false);
+        this._mainTech._parameters.push({
+            name: 'texture1',
+            type: renderer.PARAM_TEXTURE_2D
+        });
     },
 
     

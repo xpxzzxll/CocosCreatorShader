@@ -207,7 +207,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Root",
+    "_name": "Peppa",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -234,8 +234,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1136,
-      "height": 640
+      "width": 219,
+      "height": 296
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -244,8 +244,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": 16,
+      "y": 5,
       "z": 0
     },
     "_scale": {
@@ -266,67 +266,49 @@
     "_skewX": 0,
     "_skewY": 0,
     "groupIndex": 0,
-    "_id": "72epV73x1KxIJeRcZThY+S"
+    "_id": "a1SUN9q6xAubdRoT3DhJ76"
   },
   {
-    "__type__": "cc.Widget",
+    "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 5
     },
     "_enabled": true,
-    "alignMode": 1,
-    "_target": null,
-    "_alignFlags": 45,
-    "_left": 0,
-    "_right": 0,
-    "_top": 0,
-    "_bottom": 0,
-    "_verticalCenter": 0,
-    "_horizontalCenter": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_isAbsHorizontalCenter": true,
-    "_isAbsVerticalCenter": true,
-    "_originalWidth": 0,
-    "_originalHeight": 0,
-    "_id": "301O+BL0tHgbnSM2oI5kSP"
+    "_spriteFrame": {
+      "__uuid__": "80caeb7a-5092-4831-a6d5-640b2a75da93"
+    },
+    "_type": 0,
+    "_sizeMode": 1,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_state": 0,
+    "_atlas": null,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_id": "d0RyetiQpAranmEGSeRhgI"
   },
   {
-    "__type__": "cc.Layout",
+    "__type__": "184e3Hrj11L2JhYCtK1xSP/",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 5
     },
     "_enabled": true,
-    "_layoutSize": {
-      "__type__": "cc.Size",
-      "width": 300,
-      "height": 200
+    "Material": null,
+    "tex": {
+      "__uuid__": "f9eed901-d06f-4110-9fad-841914bec6f6"
     },
-    "_resize": 0,
-    "_N$layoutType": 3,
-    "_N$padding": 0,
-    "_N$cellSize": {
-      "__type__": "cc.Size",
-      "width": 40,
-      "height": 40
-    },
-    "_N$startAxis": 0,
-    "_N$paddingLeft": 0,
-    "_N$paddingRight": 0,
-    "_N$paddingTop": 0,
-    "_N$paddingBottom": 0,
-    "_N$spacingX": 0,
-    "_N$spacingY": 0,
-    "_N$verticalDirection": 1,
-    "_N$horizontalDirection": 0,
-    "_N$affectedByScale": false,
-    "_id": "7bPHEg4edIi64Xu9GpsE5J"
+    "_id": "45vFjyBYJKuLDgah0lCT0u"
   },
   {
     "__type__": "cc.Canvas",
