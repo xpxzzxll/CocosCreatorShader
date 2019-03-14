@@ -9,42 +9,31 @@ cc.Class({
         },
         fsh: {
             default: `
+                precision highp float;
                 uniform sampler2D texture;
                 uniform lowp vec4 color;
                 varying vec2 uv0;
                 void main() {
-                    float len = 18.0;
-                    float TR = 0.866025;
-                    float x = uv0.x;
-                    float y = uv0.y;
-                    int wx = int(x / 1.5 / len);
-                    int wy = int(y / TR / len);
-                    vec2 v1, v2, vn;
-                    if (wx / 2 * 2 == wx) {
-                        if (wy / 2 * 2 == wy) {
-                            v1 = vec2(len * 1.5 * float(wx), len * TR * float(wy));
-                            v2 = vec2(len * 1.5 * (float(wx) + 1.0), len * TR * (float(wy) + 1.0));
-                        } else {
-                            v1 = vec2(len * 1.5 * float(wx), len * TR * (float(wy) + 1.0));
-                            v2 = vec2(len * 1.5 * (float(wx) + 1.0), len * TR * float(wy));
-                        }
+                    float imageWidth = 512.0;
+                    float imageHeight = 512.0;
+                    float mosaicSize = 16.0;
+                    vec2 texSize = vec2(imageWidth, imageHeight);
+                    // 计算实际图像位置
+                    vec2 xy = vec2(uv0.x * texSize.x, uv0.y * texSize.y);
+                    // 计算某一个小mosaic的中心坐标
+                    vec2 mosaicCenter = vec2(floor(xy.x / mosaicSize) * mosaicSize + 0.5 * mosaicSize,
+                        floor(xy.y / mosaicSize) * mosaicSize + 0.5 * mosaicSize);
+                    // 计算距离中心的长度
+                    vec2 delXY = mosaicCenter - xy;
+                    float delLength = length(delXY);
+                    // 换算回纹理坐标系
+                    vec2 uvMosaic = vec2(mosaicCenter.x / texSize.x, mosaicCenter.y / texSize.y);
+
+                    if (delLength < 0.5 * mosaicSize) {
+                        gl_FragColor = texture2D(texture, uvMosaic);
                     } else {
-                        if (wy / 2 * 2 == wy) {
-                            v1 = vec2(len * 1.5 * float(wx), len * TR * (float(wy) + 1.0));
-                            v2 = vec2(len * 1.5 * (float(wx) + 1.0), len * TR * float(wy));
-                        } else {
-                            v1 = vec2(len * 1.5 * float(wx), len * TR * float(wy));
-                            v2 = vec2(len * 1.5 * (float(wx) + 1.0), len * TR * (float(wy) + 1.0));
-                        }
+                        gl_FragColor = texture2D(texture, uv0);
                     }
-                    float s1 = sqrt(pow(v1.x - x, 2.0) + pow(v1.y - y, 2.0));
-                    float s2 = sqrt(pow(v2.x - x, 2.0) + pow(v2.y - y, 2.0));
-                    if (s1 < s2) {
-                        vn = v1;
-                    }else {
-                        vn = v2;
-                    }
-                    gl_FragColor = texture2D(texture, vn);
                 }
             `,
             override: true

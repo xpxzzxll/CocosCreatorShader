@@ -207,7 +207,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Puyo",
+    "_name": "Peppa",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -234,8 +234,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 512,
-      "height": 512
+      "width": 219,
+      "height": 296
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -244,8 +244,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": -243,
+      "y": -53,
       "z": 0
     },
     "_scale": {
@@ -266,7 +266,7 @@
     "_skewX": 0,
     "_skewY": 0,
     "groupIndex": 0,
-    "_id": "52h+9THqJLHboDdWZAQUjt"
+    "_id": "94qhr0SNxAIZ9hvBnjZXQR"
   },
   {
     "__type__": "cc.Sprite",
@@ -277,7 +277,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "bbe2aec5-49da-458d-8e7c-42245f7592a8"
+      "__uuid__": "80caeb7a-5092-4831-a6d5-640b2a75da93"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -294,7 +294,7 @@
     "_atlas": null,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_id": "c50eO2BtdIRI291M1n9QeZ"
+    "_id": "20Thp1D6tA3oyTJfWRs1o+"
   },
   {
     "__type__": "057aexbo0ZHd5a+wxhelCmF",
@@ -305,7 +305,7 @@
     },
     "_enabled": true,
     "Material": null,
-    "_id": "0exl5GpuVA8JAZghN6SlOF"
+    "_id": "4afn6kdKJK67+kvvJqB11I"
   },
   {
     "__type__": "cc.Canvas",
