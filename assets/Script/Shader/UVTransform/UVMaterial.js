@@ -47,8 +47,6 @@ cc.Class({
     },
 
     ctor() {
-        ShaderMaterial.call(this, false);
-
         this.uniform(
             'u_offset',
             renderer.PARAM_FLOAT2,

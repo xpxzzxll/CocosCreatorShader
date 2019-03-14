@@ -21,10 +21,4 @@ cc.Class({
             override: true
         },
     },
-
-    ctor() {
-        ShaderMaterial.call(this, false);
-    },
-
-    
 });

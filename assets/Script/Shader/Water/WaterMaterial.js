@@ -52,8 +52,6 @@ cc.Class({
     },
 
     ctor() {
-        ShaderMaterial.call(this, false);
-
         this.uniform(
             'iResolution',
             renderer.PARAM_FLOAT2,

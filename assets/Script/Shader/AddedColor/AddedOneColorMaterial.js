@@ -52,8 +52,6 @@ cc.Class({
     },
 
     ctor() {
-        ShaderMaterial.call(this, false);
-
         this.uniform(
             'added',
             renderer.PARAM_COLOR4,

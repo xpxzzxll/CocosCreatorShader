@@ -52,8 +52,6 @@ cc.Class({
     },
 
     ctor() {
-        ShaderMaterial.call(this, false);
-
         this.uniform(
             'time',
             renderer.PARAM_FLOAT,
