@@ -13,9 +13,8 @@ cc.Class({
                 varying vec2 uv0;
                 void main() {
                     vec4 c = texture2D(texture, uv0);
-                    float clrbright = (c.r + c.g + c.b) * (1.0 / 3.0);
-                    float gray = 0.6 * clrbright;
-                    gl_FragColor = vec4(gray, gray, gray, c.a);
+                    vec3 rgb = vec3(dot(c.rgb, vec3(0.3, 0.59, 0.11)));
+                    gl_FragColor = vec4(rgb.r, rgb.g, rgb.b, c.a);
                 }
             `,
             override: true
