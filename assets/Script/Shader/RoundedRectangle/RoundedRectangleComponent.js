@@ -2,7 +2,7 @@ const ShaderComponent = require('ShaderComponent');
 cc.Class({
     extends: ShaderComponent,
     editor: CC_EDITOR && {
-        menu: 'Shader/CircularBeadComponent',
+        menu: 'Shader/RoundedRectangleComponent',
         disallowMultiple: true,
         executeInEditMode: false,
         requireComponent: cc.RenderComponent,
@@ -10,6 +10,6 @@ cc.Class({
     properties: {
     },
     onLoad() {
-        this.Material = require('CircularBeadMaterial');
+        this.Material = require('RoundedRectangleMaterial');
     },
 });

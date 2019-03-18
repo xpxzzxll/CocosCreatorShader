@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.43254965983543814,
-      "y": 0.43254965983543814,
+      "x": 0.6032958984375,
+      "y": 0.6032958984375,
       "z": 1
     },
     "_quat": {
@@ -234,7 +234,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 512,
+      "width": 1024,
       "height": 512
     },
     "_anchorPoint": {
@@ -280,7 +280,7 @@
       "__uuid__": "bbe2aec5-49da-458d-8e7c-42245f7592a8"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -297,7 +297,7 @@
     "_id": "2d5R2UQJhN1Zt29yPrkDKg"
   },
   {
-    "__type__": "b7456WYxnlN1qnaeVMJv/We",
+    "__type__": "2a54cTJtyhAp4JG+//ZxEOy",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -305,8 +305,7 @@
     },
     "_enabled": true,
     "Material": null,
-    "_time": 0,
-    "_id": "06gnhf+0VCyqXQzZmR3B3b"
+    "_id": "48pRbmAANNz535kqC6PNkz"
   },
   {
     "__type__": "cc.Canvas",
