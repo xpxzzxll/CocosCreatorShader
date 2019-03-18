@@ -7,22 +7,33 @@ cc.Class({
             default: 'rounded-rectangle',
             override : true
         },
+
+        radius: {
+            set(val) {
+                this._effect.setProperty('radius', val);
+            },
+        },
+        w_divide_h : {
+            set(val) {
+                this._effect.setProperty('w_divide_h', val);
+            },
+        },
+
         fsh: {
             default: `
                 uniform sampler2D texture;
                 uniform lowp vec4 color;
+                uniform float radius;
+                uniform float w_divide_h;
                 varying vec2 uv0;
                 void main() {
-                    float radius = 0.1;
-                    float w_divide_h = 2.0;
-
-                    float dis = 0.5 - radius;
                     vec4 c = color * texture2D(texture, uv0);
-                    vec2 uv = uv0 - vec2(0.5, 0.5); 
-                    float rx = mod(abs(uv.x), dis);
-                    float ry = mod(abs(uv.y), dis);
-                    float mx = step(dis, abs(uv.x));
-                    float my = step(dis, abs(uv.y));
+                    vec2 uv = uv0 - vec2(0.5, 0.5);
+                    uv *= vec2(w_divide_h, 1.0);
+                    float rx = mod(abs(uv.x), 0.5 * w_divide_h - radius);
+                    float ry = mod(abs(uv.y), 0.5 - radius);
+                    float mx = step(0.5 * w_divide_h - radius, abs(uv.x));
+                    float my = step(0.5 - radius, abs(uv.y));
                     float len = length(vec2(rx, ry));
                     float ml = step(radius, len);
                     float delta = len - radius;
@@ -35,5 +46,18 @@ cc.Class({
             `,
             override: true
         },
+    },
+    ctor() {
+        this.uniform(
+            'radius',
+            renderer.PARAM_FLOAT,
+            0.1
+        );
+
+        this.uniform(
+            'w_divide_h',
+            renderer.PARAM_FLOAT,
+            1.0
+        );
     },
 });
