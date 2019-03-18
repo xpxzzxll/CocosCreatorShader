@@ -30,17 +30,22 @@ cc.Class({
                     vec4 c = color * texture2D(texture, uv0);
                     vec2 uv = uv0 - vec2(0.5, 0.5);
                     uv *= vec2(w_divide_h, 1.0);
-                    float rx = mod(abs(uv.x), 0.5 * w_divide_h - radius);
-                    float ry = mod(abs(uv.y), 0.5 - radius);
-                    float mx = step(0.5 * w_divide_h - radius, abs(uv.x));
-                    float my = step(0.5 - radius, abs(uv.y));
-                    float len = length(vec2(rx, ry));
-                    float ml = step(radius, len);
-                    float delta = len - radius;
-                    if (len > radius && delta < 0.005) {
-                        ml = smoothstep(0.0, 0.01, delta);
+                    float u = 0.5 * w_divide_h - radius;
+                    float v = 0.5 - radius;
+                    float ax = step(u, abs(uv.x));
+                    float ay = step(v, abs(uv.y));
+                    float al = 0.0;
+                    if (abs(uv.x) >= u && abs(uv.y) >= v) {
+                        float rx = abs(uv.x) - u;
+                        float ry = abs(uv.y) - v;
+                        float len = length(vec2(rx, ry));
+                        al = step(radius, len);
+                        float delta = len - radius;
+                        if (len > radius && delta < 0.005) {
+                            al = smoothstep(0.0, 0.01, delta);
+                        }
                     }
-                    float alpha = 1.0 - mx * my * ml;
+                    float alpha = 1.0 - ax * ay * al;
                     gl_FragColor = vec4(c.r, c.g, c.b, c.a * alpha);
                 }
             `,

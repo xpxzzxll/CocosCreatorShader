@@ -19,7 +19,7 @@ cc.Class({
             range: [0, 1, 0.1],
             slide: true,
             notify: function () {
-                this._updateStatus();
+                this._updateRange();
             }
         },
     },
@@ -31,9 +31,12 @@ cc.Class({
     onEnable() {
         ShaderComponent.prototype.onEnable.call(this);
         this.material.targetTex = this.tex;
+        this.material.range = this.range;
     },
 
-    _updateStatus() {
-        this.material.range = this.range;
+    _updateRange() {
+        if (!CC_EDITOR) {
+            this.material.range = this.range;
+        }
     }
 });

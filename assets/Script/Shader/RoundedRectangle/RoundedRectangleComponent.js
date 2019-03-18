@@ -25,9 +25,8 @@ cc.Class({
     onEnable() {
         //TODO:
         //有一个BUG, 这个组件在两个节点上, 表现为第一次设置的值
-        this._super();
+        ShaderComponent.prototype.onEnable.call(this);
 
-        cc.log(this.radius);
         this.material.w_divide_h = this.node.width / this.node.height;
         this.material.radius = this.radius;
     },
