@@ -99,10 +99,12 @@ cc.Class({
              * texture 内置
              * color 内置
              */
-            [{
+            [
+                {
                     name: 'texture',
                     type: renderer.PARAM_TEXTURE_2D
-                }, {
+                }, 
+                {
                     name: 'color',
                     type: renderer.PARAM_COLOR4
                 }

@@ -24,7 +24,9 @@ cc.Class({
 
     onEnable() {
         //TODO:
-        //有一个BUG, 这个组件在两个节点上, 表现为第一次设置的值
+        //这个组件有很多限制
+        //1.不能作用于纹理来自于纹理集的Sprite, 因为计算的是整个张纹理
+        //2. 来自同一个非纹理集的纹理的两个Sprite, uniform设置不同的值,后渲染的表现错误.因为会参与批渲染合并,除非主动打破批渲染合并.
         ShaderComponent.prototype.onEnable.call(this);
 
         this.material.w_divide_h = this.node.width / this.node.height;

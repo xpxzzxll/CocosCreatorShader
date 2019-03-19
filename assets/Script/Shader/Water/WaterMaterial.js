@@ -46,7 +46,7 @@ cc.Class({
 
         resolution: {
             set(val) {
-                 this.effect.setProperty('iResolution', val);
+                this.effect.setProperty('iResolution', val);
             }
         }
     },

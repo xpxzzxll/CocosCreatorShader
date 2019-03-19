@@ -15,6 +15,7 @@ cc.Class({
         },
         w_divide_h : {
             set(val) {
+                cc.log(val)
                 this._effect.setProperty('w_divide_h', val);
             },
         },
@@ -29,9 +30,16 @@ cc.Class({
                 void main() {
                     vec4 c = color * texture2D(texture, uv0);
                     vec2 uv = uv0 - vec2(0.5, 0.5);
-                    uv *= vec2(w_divide_h, 1.0);
-                    float u = 0.5 * w_divide_h - radius;
-                    float v = 0.5 - radius;
+                    float u,v;
+                    if (w_divide_h >= 1.0) {
+                        uv *= vec2(w_divide_h, 1.0);
+                        u = 0.5 * w_divide_h - radius;
+                        v = 0.5 - radius;
+                    }else {
+                        uv *= vec2(1.0, 1.0 / w_divide_h);
+                        u = 0.5 - radius;
+                        v = 0.5 / w_divide_h - radius;
+                    }
                     float ax = step(u, abs(uv.x));
                     float ay = step(v, abs(uv.y));
                     float al = 0.0;
@@ -53,16 +61,24 @@ cc.Class({
         },
     },
     ctor() {
-        this.uniform(
-            'radius',
-            renderer.PARAM_FLOAT,
-            0.1
-        );
+        // this.uniform(
+        //     'radius',
+        //     renderer.PARAM_FLOAT,
+        //     0.1
+        // );
 
-        this.uniform(
-            'w_divide_h',
-            renderer.PARAM_FLOAT,
-            1.0
-        );
+        // this.uniform(
+        //     'w_divide_h',
+        //     renderer.PARAM_FLOAT,
+        //     1.0
+        // );
+        this._mainTech._parameters.push({
+            name: 'radius',
+            type: renderer.PARAM_FLOAT
+        });
+        this._mainTech._parameters.push({
+            name: 'w_divide_h',
+            type: renderer.PARAM_FLOAT
+        });
     },
 });
