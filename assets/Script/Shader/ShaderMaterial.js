@@ -1,10 +1,11 @@
 const Material = cc.renderer.renderEngine.Material;
 const renderer = cc.renderer.renderEngine.renderer;
-const gfx = cc.renderer.renderEngine.gfx
-cc.Class({
+const gfx = cc.renderer.renderEngine.gfx;
+const ShaderMaterial = cc.Class({
+    name: 'cc.ShaderMaterial',
     extends: Material,
     properties: {
-        name: "default",
+        name: 'default',
         vsh: `
             uniform mat4 viewProj;
             attribute vec3 a_position;
@@ -75,8 +76,12 @@ cc.Class({
         },
     },
 
-    ctor() {
-        if ( '' == this.fsh || '' == this.vsh) {
+    ctor(batch) {
+        this.init(batch);
+    },
+
+    init() {
+        if ('' == this.fsh || '' == this.vsh) {
             return;
         }
         let lib = cc.renderer._forward._programLib;
@@ -99,11 +104,10 @@ cc.Class({
              * texture 内置
              * color 内置
              */
-            [
-                {
+            [{
                     name: 'texture',
                     type: renderer.PARAM_TEXTURE_2D
-                }, 
+                },
                 {
                     name: 'color',
                     type: renderer.PARAM_COLOR4
@@ -139,3 +143,4 @@ cc.Class({
         this._effect.setProperty(name, val);
     }
 });
+ShaderMaterial.batch = true;

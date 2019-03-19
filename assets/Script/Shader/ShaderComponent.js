@@ -43,7 +43,7 @@ cc.Class({
         } else if (rc instanceof dragonBones.ArmatureDisplay) {
             texture = rc.dragonAtlasAsset && rc.dragonAtlasAsset.texture;
         }
-        let material = this._material || new this.Material();
+        let material = this._material || new this.Material(this.Material.batch);
         material.useColor = false;
         if (texture) {
             material.texture = texture;

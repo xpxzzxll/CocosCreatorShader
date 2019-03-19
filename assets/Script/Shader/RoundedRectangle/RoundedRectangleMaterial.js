@@ -1,6 +1,7 @@
 const ShaderMaterial = require('ShaderMaterial');
 const renderer = cc.renderer.renderEngine.renderer;
 cc.Class({
+    name: 'cc.RoundedRectangleMaterial',
     extends: ShaderMaterial,
     properties: {
         name: {
@@ -15,7 +16,6 @@ cc.Class({
         },
         w_divide_h : {
             set(val) {
-                cc.log(val)
                 this._effect.setProperty('w_divide_h', val);
             },
         },
@@ -60,25 +60,24 @@ cc.Class({
             override: true
         },
     },
-    ctor() {
-        // this.uniform(
-        //     'radius',
-        //     renderer.PARAM_FLOAT,
-        //     0.1
-        // );
+    ctor(batch) {
+        this.uniform(
+            'radius',
+            renderer.PARAM_FLOAT,
+            0.1
+        );
 
-        // this.uniform(
-        //     'w_divide_h',
-        //     renderer.PARAM_FLOAT,
-        //     1.0
-        // );
-        this._mainTech._parameters.push({
-            name: 'radius',
-            type: renderer.PARAM_FLOAT
-        });
-        this._mainTech._parameters.push({
-            name: 'w_divide_h',
-            type: renderer.PARAM_FLOAT
-        });
+        this.uniform(
+            'w_divide_h',
+            renderer.PARAM_FLOAT,
+            1.0
+        );
     },
+
+    init(batch) {
+        if (false == batch) {
+            this.name = 'rounded-rectangle' + Math.random().toFixed(6);
+        }
+        ShaderMaterial.prototype.init.call(this);
+    }
 });
