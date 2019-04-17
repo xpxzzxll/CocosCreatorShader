@@ -4,24 +4,24 @@
 ## 基本类型
 
 |类型|说明|
-|---|---|
-|__void__|空类型,即不返回任何值|
-|__bool__|布尔类型 true,false|
-|__int__|带符号的整数 signed integer|
-|__float__|带符号的浮点数 floating scalar|
-|__vec2, vec3, vec4__|n维浮点数向量 n-component floating point vector|
+|-----------------------|---|
+|__void__               |空类型,即不返回任何值|
+|__bool__               |布尔类型 true,false|
+|__int__                |带符号的整数 signed integer|
+|__float__              |带符号的浮点数 floating scalar|
+|__vec2, vec3, vec4__   |n维浮点数向量 n-component floating point vector|
 |__bvec2, bvec3, bvec4__|n维布尔向量 Boolean vector|
 |__ivec2, ivec3, ivec4__|n维整数向量 signed integer vector|
-|__mat2, mat3, mat4__|2x2, 3x3, 4x4 浮点数矩阵 float matrix|
-|__sampler2D__|2D纹理 a 2D texture|
-|__samplerCube__|盒纹理 cube mapped texture|
+|__mat2, mat3, mat4__   |2x2, 3x3, 4x4 浮点数矩阵 float matrix|
+|__sampler2D__          |2D纹理 a 2D texture|
+|__samplerCube__        |盒纹理 cube mapped texture|
 
 ## 基本结构和数组
 
 |类型|说明|
 |---|---|
-|结构|struct type-name{} 类似c语言中的 结构体|
-|数组| float foo[3] glsl只支持1维数组,数组可以是结构体的成员|
+|结构   | struct type-name { } 类似c语言中的 结构体|
+|数组   | float foo[3],glsl只支持1维数组,数组可以是结构体的成员|
 
 ## 向量的分量访问
 
@@ -141,14 +141,11 @@ vec3 c = a + b; // = vec3(1.1, 2.2, 3.3)
 vec3 d = a * b; // = vec3(0.1, 0.4, 0.9)
 ```
 
-![](___2.png)
-
 __3. `vec(向量)` 与 `mat(矩阵)`:__
 
 要保证操作数的阶数相同,且vec与mat间只存在乘法运算.
 
 它们的计算方式和线性代数中的矩阵乘法相同,不是逐分量运算.
-
 
 ```cpp
 vec2 v = vec2(10., 20.);
@@ -159,16 +156,13 @@ vec2 w = m * v; // = vec2(1. * 10. + 3. * 20., 2. * 10. + 4. * 20.)
 vec2 v = vec2(10., 20.);
 mat2 m = mat2(1., 2.,  3., 4.);
 vec2 w = v * m; // = vec2(1. * 10. + 2. * 20., 3. * 10. + 4. * 20.)
-
-
 ```
+
 向量与矩阵的乘法规则如下:
 
-![](___3.png)
+![矩阵*向量](/glsl-manual/MV.png)
 
-
-![](___4.png)
-
+![向量*矩阵](/glsl-manual/VM.png)
 
 __4. `mat(矩阵)` 与 `mat(矩阵)`:__
 
@@ -186,7 +180,7 @@ mat2 d = a+b;//mat2(1.+10.,2.+20.,3.+30.,4.+40);
 ```
 矩阵乘法规则如下:
 
-![](___5.png)
+![矩阵乘法](/glsl-manual/MM.png)
 
 
 ### 变量限定符:
