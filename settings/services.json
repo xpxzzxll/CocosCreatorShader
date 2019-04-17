@@ -16,8 +16,8 @@
         "iOS",
         "HTML5"
       ],
-      "package_download_url": "http://download.cocos.com/CocosServices/plugins/service-analytics/1.1.6_2.0.1_2.0.2.zip",
-      "package_version_desc": "1、 更新 H5 SDK 版本至 2.0.2。<br>2、 去除 AppSecret 参数。<br>3、appid 参数自动选择当前游戏绑定的游戏 appid。<br>4、 如有相关问题咨询或者需求， 可以联系我们技术支持邮箱 <a href=' '>support-cocos@cocos.com</a>",
+      "package_download_url": "http://download.cocos.com/CocosServices/plugins/service-analytics/1.1.7_2.0.3.zip",
+      "package_version_desc": "1、 更新 H5 SDK 版本至 2.0.3。<br>2、 SDK 优化更新，删除 init 接口字段 'channel' ，改为 login 接口输入。<br>3、 如有相关问题咨询或者需求， 可以联系我们技术支持邮箱 <a href=' '>support-cocos@cocos.com</a>",
       "service_component_name": "service-analytics",
       "package_versions": [
         "1.0.0_1.0.5",
@@ -25,7 +25,8 @@
         "1.1.3_2.0.1",
         "1.1.4_2.0.1",
         "1.1.5_2.0.1",
-        "1.1.6_2.0.1_2.0.2"
+        "1.1.6_2.0.1_2.0.2",
+        "1.1.7_2.0.3"
       ],
       "build_platform": [
         "web-mobile",
@@ -59,12 +60,13 @@
         "iOS",
         "HTML5"
       ],
-      "package_download_url": "http://download.cocos.com/CocosServices/plugins/service-matchvs/1.0.5_3.7.7.3.zip",
-      "package_version_desc": "2019-01-17<br> SDK版本：v3.7.7.3 <br> 1. 增加 断线补帧接口 getOffLineData <br> 2. 修改 login 接口和 init 接口参数，去掉重复参数。 <br> 3. 修复 sendEvent 有新用户刚刚进入房间的时候收不到第一条消息。 <br> 4. 修改 接口调用返回错误码，内部逻辑修改，功能不变。 <br> 5. 增加 组队匹配 接口<br> 6. 修复 组队开始匹配开始一次后不能再次匹配问题。 <br> 7. 其他内部代码的一些优化。<br> ",
+      "package_download_url": "http://download.cocos.com/CocosServices/plugins/service-matchvs/1.0.6_3.7.9.2.zip",
+      "package_version_desc": "更新日期：2019-03-20<br>更新内容：<br>1、添加多节点相关接口 <br>2、优化独立部署wss和ws切换<br>3、优化login参数容错<br>4、添加组队中踢人和消息发送接口<br>5、添加取消组队匹配接口",
       "service_component_name": "service-matchvs",
       "package_versions": [
         "1.0.3_3.7.6.4",
-        "1.0.5_3.7.7.3"
+        "1.0.5_3.7.7.3",
+        "1.0.6_3.7.9.2"
       ],
       "build_platform": [
         "web-mobile",
@@ -80,6 +82,35 @@
         "quickgame",
         "qgame",
         "huawei"
+      ]
+    },
+    {
+      "service_id": "242",
+      "service_name": "Agora Voice",
+      "service_desc": "稳定、低耗、76ms超低延时、全球200+数据中心覆盖；变声器、超高音质、听声辩位等丰富玩法极速接入；全平台支持：Android、iOS、Web。\n技术支持群QQ群：799099183",
+      "service_title": "游戏内置实时语音SDK",
+      "service_icon": "https://account.cocos.com/uploads/client_icon/date(\"Y-m-d\")/50fe52b789c2fc1e1fff9eec161c1bb3.png",
+      "service_guide_url": "https://docs.agora.io/cn/Interactive Gaming/game_c",
+      "service_sample_url": " https://github.com/AgoraIO/Voice-Call-for-Mobile-Gaming/tree/master/Basic-Voice-Call-for-Gaming/Hello-Cocos-Creator-Voice-Agora",
+      "service_dev_url": "https://sso.agora.io/api/oauth/cocos/login",
+      "service_type": "3",
+      "service_type_zh": "公司和个人游戏",
+      "support_platform": [
+        "Android",
+        "iOS",
+        "HTML5"
+      ],
+      "package_download_url": "http://download.cocos.com/CocosServices/plugins/service-agora/1.0.1_2.2.3.20_2.5.2.zip",
+      "package_version_desc": "first release.",
+      "service_component_name": "service-agora",
+      "package_versions": [
+        "1.0.1_2.2.3.20_2.5.2"
+      ],
+      "build_platform": [
+        "web-mobile",
+        "web-desktop",
+        "android",
+        "ios"
       ]
     },
     {
