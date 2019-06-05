@@ -37,6 +37,7 @@ cc.Class({
         cc.dynamicAtlasManager.enabled = false;
 
         let rc = this.getComponent(cc.RenderComponent);
+        let originMaterial = rc.getMaterial();
         let texture = null;
         if (rc instanceof cc.Sprite) {
             texture = rc.spriteFrame.getTexture();
@@ -44,11 +45,17 @@ cc.Class({
             texture = rc.dragonAtlasAsset && rc.dragonAtlasAsset.texture;
         }
         let material = this._material || new this.Material(this.Material.batch);
-        material.useColor = false;
+        material.useColor = !!originMaterial.useColor;
+        material.useTexture = !!originMaterial.useTexture;
+        material.useModel = !!originMaterial.useModel;
+        material.alphaTest = !!originMaterial.alphaTest;
+        material.use2DPos = !!originMaterial.use2DPos;
+        material.useTint = !!originMaterial.useTint;
+
         if (texture) {
             material.texture = texture;
             if (rc instanceof cc.Sprite && rc._renderData) {
-                 rc._renderData.material = material;
+                rc._renderData.material = material;
             }
             rc.markForUpdateRenderData(true);
             rc.markForRender(true);

@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 6
+        "__id__": 14
       }
     ],
     "_active": true,
@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.6032958984375,
-      "y": 0.6032958984375,
+      "x": 0.6046875,
+      "y": 0.6046875,
       "z": 1
     },
     "_quat": {
@@ -69,13 +69,19 @@
     "_children": [
       {
         "__id__": 3
+      },
+      {
+        "__id__": 7
+      },
+      {
+        "__id__": 11
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 5
+        "__id__": 13
       }
     ],
     "_prefab": null,
@@ -125,6 +131,252 @@
   },
   {
     "__type__": "cc.Node",
+    "_name": "MiranaNightshade",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 2,
+    "_components": [
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      }
+    ],
+    "_prefab": {
+      "__id__": 6
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 200,
+      "height": 250
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.45,
+      "y": 0
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "groupIndex": 0,
+    "_id": "b2ZrhTXg1KEZI44OetR+Xt"
+  },
+  {
+    "__type__": "dragonBones.ArmatureDisplay",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "_armatureName": "armatureName",
+    "_animationName": "wait",
+    "_preCacheMode": 0,
+    "_cacheMode": 0,
+    "playTimes": 0,
+    "premultipliedAlpha": false,
+    "_armatureKey": "c0c3e80f-706a-406c-872c-f6d8a9da8f09#fd201b48-2630-4961-889a-3808a8b8f44e",
+    "_accTime": 0,
+    "_playCount": 0,
+    "_frameCache": null,
+    "_curFrame": null,
+    "_playing": false,
+    "_armatureCache": null,
+    "_N$dragonAsset": {
+      "__uuid__": "c0c3e80f-706a-406c-872c-f6d8a9da8f09"
+    },
+    "_N$dragonAtlasAsset": {
+      "__uuid__": "fd201b48-2630-4961-889a-3808a8b8f44e"
+    },
+    "_N$_defaultArmatureIndex": 0,
+    "_N$_animationIndex": 4,
+    "_N$_defaultCacheMode": 0,
+    "_N$timeScale": 1,
+    "_N$debugBones": false,
+    "_N$enableBatch": false,
+    "_id": "f7fz2l+NNAFbV/uT9uHLFT"
+  },
+  {
+    "__type__": "3e022SoRA5INrlIjjiZWwbc",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 3
+    },
+    "_enabled": true,
+    "Material": null,
+    "_time": 0,
+    "_id": "d74gHAVFBEeIb5ANbSo1k/"
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 3
+    },
+    "asset": {
+      "__uuid__": "ed7b46e8-4acd-4d11-9dd9-7a58ef12ff53"
+    },
+    "fileId": "d4XEYEd+1PfZJazpdVkBom",
+    "sync": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "MiranaNightshade copy",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 2,
+    "_components": [
+      {
+        "__id__": 8
+      },
+      {
+        "__id__": 9
+      }
+    ],
+    "_prefab": {
+      "__id__": 10
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 200,
+      "height": 250
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.45,
+      "y": 0
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "groupIndex": 0,
+    "_id": "3eCHI4x25K6KjUXCJyc3es"
+  },
+  {
+    "__type__": "dragonBones.ArmatureDisplay",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 7
+    },
+    "_enabled": true,
+    "_armatureName": "armatureName",
+    "_animationName": "wait",
+    "_preCacheMode": 0,
+    "_cacheMode": 0,
+    "playTimes": 0,
+    "premultipliedAlpha": false,
+    "_armatureKey": "c0c3e80f-706a-406c-872c-f6d8a9da8f09#fd201b48-2630-4961-889a-3808a8b8f44e",
+    "_accTime": 0,
+    "_playCount": 0,
+    "_frameCache": null,
+    "_curFrame": null,
+    "_playing": false,
+    "_armatureCache": null,
+    "_N$dragonAsset": {
+      "__uuid__": "c0c3e80f-706a-406c-872c-f6d8a9da8f09"
+    },
+    "_N$dragonAtlasAsset": {
+      "__uuid__": "fd201b48-2630-4961-889a-3808a8b8f44e"
+    },
+    "_N$_defaultArmatureIndex": 0,
+    "_N$_animationIndex": 4,
+    "_N$_defaultCacheMode": 0,
+    "_N$timeScale": 1,
+    "_N$debugBones": false,
+    "_N$enableBatch": false,
+    "_id": "4fmS9PfoVG+pixnyCfQ16D"
+  },
+  {
+    "__type__": "3e022SoRA5INrlIjjiZWwbc",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 7
+    },
+    "_enabled": false,
+    "Material": null,
+    "_time": 0,
+    "_id": "a1sccgBcBK47JgJGHKsCCX"
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 7
+    },
+    "asset": {
+      "__uuid__": "ed7b46e8-4acd-4d11-9dd9-7a58ef12ff53"
+    },
+    "fileId": "d4XEYEd+1PfZJazpdVkBom",
+    "sync": false
+  },
+  {
+    "__type__": "cc.Node",
     "_name": "Main Camera",
     "_objFlags": 512,
     "_parent": {
@@ -135,7 +387,7 @@
     "_level": 2,
     "_components": [
       {
-        "__id__": 4
+        "__id__": 12
       }
     ],
     "_prefab": null,
@@ -188,7 +440,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 3
+      "__id__": 11
     },
     "_enabled": true,
     "_cullingMask": 4294967295,
@@ -234,10 +486,10 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 7
+        "__id__": 15
       },
       {
-        "__id__": 8
+        "__id__": 16
       }
     ],
     "_prefab": null,
@@ -290,9 +542,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 14
     },
     "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
     "_spriteFrame": {
       "__uuid__": "35da6696-7c95-4344-821a-1e85a09450a4"
     },
@@ -309,8 +563,6 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
     "_id": "52SUcf77dDr4GQM+SuAlwn"
   },
   {
@@ -318,7 +570,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 14
     },
     "_enabled": true,
     "Material": null,
