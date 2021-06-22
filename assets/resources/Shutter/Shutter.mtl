@@ -1,0 +1,17 @@
+{
+  "__type__": "cc.Material",
+  "_name": "Shutter",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "4cb89b3e-0277-48fe-a18d-c3ede14b5e8c"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
+  }
+}

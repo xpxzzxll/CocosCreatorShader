@@ -1,0 +1,17 @@
+{
+  "__type__": "cc.Material",
+  "_name": "Emboss",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "ce8f7be6-6351-4f5b-b9a4-7ef6c8955d40"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
+  }
+}

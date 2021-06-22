@@ -1,0 +1,17 @@
+{
+  "__type__": "cc.Material",
+  "_name": "OutterGlow",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "307adbcb-d674-4054-94a2-3bdaeb908d5c"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
+  }
+}

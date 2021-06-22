@@ -1,0 +1,17 @@
+{
+  "__type__": "cc.Material",
+  "_name": "InnerGlow",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "44791e23-db18-4518-975e-a6323aa3e2b8"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
+  }
+}

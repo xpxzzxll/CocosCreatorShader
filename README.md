@@ -1,10 +1,5 @@
 # CocosCreatorShader
 
-基于CococCreator2.0.9版本的ShaderDemo
-
-目前可以使用在cc.Sprite和dragonBones.ArmatureDisplay
-
-简单的收录一些游戏开发过程中常用的特效
 
 ## glsl与cg常用数据结构对应关系
 

@@ -1,0 +1,20 @@
+{
+  "__type__": "cc.Material",
+  "_name": "Flash",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "7d5dfedb-4f05-4926-9c7b-29794b8f285e"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      },
+      "props": {
+        "Wight": 0.2
+      }
+    }
+  }
+}

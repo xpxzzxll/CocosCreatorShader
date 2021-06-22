@@ -1,0 +1,17 @@
+{
+  "__type__": "cc.Material",
+  "_name": "MultiTexture",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "5c5cba14-087f-408f-a628-498f5713431c"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
+  }
+}
